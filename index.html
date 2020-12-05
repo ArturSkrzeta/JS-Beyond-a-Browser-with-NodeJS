@@ -102,6 +102,35 @@
 									</li>
 									</ul>
 
+									<h5>HTTP request:</h5>
+									<ul>
+										<li>Which request is going to be handled by an enpoint is specified as app method:
+											<br>
+											<code>app.get('/home', (req, rest) => ... )</code>
+										</li>
+										<li>Besides get, there are also post, delete, patch (like update).</li>
+									</ul>
+
+									<h5>Connecting with MongoDB Atlas database:</h5>
+									<ul>
+										<li>At first we need to import MongoClient:
+											<br>
+											<code>var MongoClient = require('mongodb').MongoClient</code><br>
+										</li>
+										<li>Then we can set up a connection and fetch all items form a collection:
+											<br>
+											<code>MongoClient.connect(dbUrl, {useNewUrlParser:true, useUnifiedTopology:true}, function(err, db) {</code><br>&nbsp&nbsp
+												<code>if (err) throw err</code><br>&nbsp&nbsp
+												<code>var dbo = db.db("company")</code><br>&nbsp&nbsp
+												<code>var cursor = dbo.collection('products').find()</code><br>&nbsp&nbsp
+												<code>cursor.each(function(err,doc) {</code><br>&nbsp&nbsp&nbsp&nbsp
+													<code>console.log(doc)</code><br>&nbsp&nbsp
+												<code>})</code><br>
+											<code>})</code>
+										</li>
+									</ul>
+
+
 									<h5>Deploying on Heroku:</h5>
 									<ul>
 									  <li>We can deploy our application into cloud platform.</li>
@@ -112,6 +141,8 @@
 											<br>
 											in code:<br>
 											<code>const port = process.env.PORT || 30000</code><br>
+											in package.json:<br>
+											<code>"start": "node main.js"</code>
 											terminal:<br>
 											<code>cd project</code><br>
 											<code>heroku login</code><br>
@@ -156,6 +187,12 @@
 									<code>npm i express</code>
 									<br>
 									<code>npm i hbs</code>
+									<br>
+									<code>npm i nodeman</code>
+									<br>
+									<code>npm i mongodb</code>
+									<br>
+									<code>npm i dotenv</code>
 								</div>
 							</section>
 
