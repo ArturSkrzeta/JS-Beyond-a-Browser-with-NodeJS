@@ -1,8 +1,7 @@
 # JS Beyond a Browser with NodeJS
 
 ## Routing e.g. items.js
-### /items
-### /items/specific
+### /items and /items/specific
 ```
 const express = require('express')
 const router = express.Router()
