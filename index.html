@@ -46,7 +46,7 @@
 							<section id="one">
 								<div class="container">
 									<header class="major">
-										<h2>Data Visualization with JavaScript</h2>
+										<h2>JS beyond a Browser</h2>
 										<h3>Intro</h3>
 										<p>...</p>
 										<h5>...:</h5>
@@ -74,9 +74,30 @@
 								<div class="container">
 									<h3>Demo</h3>
 
-									<h5>Application</h5>
+									<h5>Setting up nodejs server:</h5>
 									<ul>
-										<li>...</li>
+										<li>We can run server by running using <b>express</b> extension:
+											<br>
+											<code>const express = require('express')</code><br>
+											<code>const port = 3000</code><br>
+											<code>const app = express()</code><br>
+											<code>...</code><br>
+											<code>app.listen(port)</code>
+										</li>
+									</ul>
+
+									<h5>HTML templates:</h5>
+									<ul>
+										<li>Html templates for being rendered to a browser are keptin in directory: './views'</li>
+										<li>Html templates requires '.hbs' extension.</li>
+										<li>We need to install hbs with npm.</li>
+										<li>We let html template to be rendered for a specific endpoint, here '/home':
+											<br>
+											<code>app.set('view engine', 'hbs')</code><br>
+											<code>app.get('/home', (req, res) => {</code><br>&nbsp&nbsp&nbsp
+												<code>res.render('index')</code><br>
+											<code>})</code>
+									</li>
 									</ul>
 
 									<h5>Deploying on Heroku:</h5>
@@ -85,6 +106,31 @@
 										<li>Heroku offers PaaS solutions or many programming languages.</li>
 										<li>It requires Heroku CLI installation in order to upload the application.</li>
 										<li>It requires also git installation to commit the application to Heroku repository.</li>
+										<li>Here goes deployment procedure:
+											<br>
+											in code:<br>
+											<code>const port = process.env.PORT || 30000</code><br>
+											terminal:<br>
+											<code>cd project</code><br>
+											<code>heroku login</code><br>
+											<code>git init</code><br>
+											<code>heroku git:remote -a arturskrzeta</code><br>
+											<code>git config user.email ...</code><br>
+											<code>git config user.name ...</code><br>
+											every time change in the project:<br>
+											<code>git add .</code><br>
+											<code>git commit -m "initial commit"</code><br>
+											pushing changes to heroku repository:<br>
+											<code>git push heroku master</code><br>
+										</li>
+										<li>App availabe at:
+											<br>
+											<code>arturskrzeta.herokuapp.com</code>
+										</li>
+										<li>Logs available with:
+											<br>
+											<code>heroku logs --tail</code>
+										</li>
 									</ul>
 
 								</div>
