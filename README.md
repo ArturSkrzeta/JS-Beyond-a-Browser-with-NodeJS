@@ -34,7 +34,7 @@ router.get('/', (req, res) => {
 
 });
 
-// availavle under endpoint /itemrs/specific
+// availavle under endpoint /items/specific
 router.get('/specific', (req, res) => {
   res.send('Specific item.')
 })
