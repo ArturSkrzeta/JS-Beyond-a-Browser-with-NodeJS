@@ -48,10 +48,18 @@
 									<header class="major">
 										<h2>JS beyond a Browser</h2>
 										<h3>Intro</h3>
-										<p>...</p>
-										<h5>...:</h5>
+										<p>NodeJS creates conditions to use JavaScript outside of a browser.Simply put, it is an open-source runtime system for making server to run JS applications.
+											In the project, I build and deploy the REST API application to Heroku which is the cloud platform in the PaaS model.</p>
+										<h5>REST API:</h5>
 										<ul>
-											<li>...</li>
+											<li>Web service APIs that adhere to the REST architectural constraints are called RESTful APIs.</li>
+											<li>RESTful web service API allow requesting system to access or manipulate textual representation of web's resources.</li>
+											<li>Requesting system has a set of uniform and predefined by API stateless operations.</li>
+											<li>When we say that operation is stateless, it means next operation doesn't know about previous ones. In other words, operations on Web resources are independent.</li>
+											<li>Requesting system can call available operations using HTTP requests: GET, HEAD, POST, PUT, PATCH, DELETE, CONNECT, OPTIONS and TRACE</li>
+											<li>RESTful Web service, makes web rosurces available under a specific Uniform Resource Identifier (URI) which is a string that provides a unique address where a resource can be found.</li>
+											<li>Sending request to a resource's URI results with response in format of HTML, XML or JSON.</li>
+											<li>In practice, when system or user is requesting, it sends chosen HTTP request under a specifed URI with defined parameters in form of JSON (when for example updating a resource).</li>
 										</ul>
 									</header>
 								</div>
@@ -113,23 +121,19 @@
 
 									<h5>Connecting with MongoDB Atlas database:</h5>
 									<ul>
-										<li>At first we need to import MongoClient:
+										<li>At first we need to import mongoose:
 											<br>
-											<code>var MongoClient = require('mongodb').MongoClient</code><br>
+											<code>const mongoose = require('mongoose')</code><br>
 										</li>
-										<li>Then we can set up a connection and fetch all items form a collection:
+										<li>Then we can set up a connection:
 											<br>
-											<code>MongoClient.connect(dbUrl, {useNewUrlParser:true, useUnifiedTopology:true}, function(err, db) {</code><br>&nbsp&nbsp
-												<code>if (err) throw err</code><br>&nbsp&nbsp
-												<code>var dbo = db.db("company")</code><br>&nbsp&nbsp
-												<code>var cursor = dbo.collection('products').find()</code><br>&nbsp&nbsp
-												<code>cursor.each(function(err,doc) {</code><br>&nbsp&nbsp&nbsp&nbsp
-													<code>console.log(doc)</code><br>&nbsp&nbsp
-												<code>})</code><br>
+											<code>mongoose.set('useUnifiedTopology', true)</code><br>
+											<code>mongoose.set('useNewUrlParser', true)</code><br>
+											<code>mongoose.connect(process.env.DB_CONNECTION, function(err, db) {</code><br>&nbsp&nbsp
+												<code>console.log('Connected to db.')</code><br>
 											<code>})</code>
 										</li>
 									</ul>
-
 
 									<h5>Deploying on Heroku:</h5>
 									<ul>
@@ -168,6 +172,11 @@
 											<br>
 											<img src="images/heroku.JPG" width="500">
 										</li>
+									</ul>
+
+									<h5>Postman</h5>
+									<ul>
+										<li>...</li>
 									</ul>
 
 								</div>
