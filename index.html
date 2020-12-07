@@ -239,22 +239,40 @@
 								<div class="container">
 									<h3>Setup</h3>
 									<h5>App installation:</h5>
-									<br>
-									<code>cd ./app_directory</code>
-									<br>
-									<code>npm init</code>
-									<br>
-									<code>npm install express</code>
-									<br>
-									<code>npm install hbs</code>
-									<br>
-									<code>npm install nodeman</code>
-									<br>
-									<code>npm install mongodb</code>
-									<br>
-									<code>npm install dotenv</code>
-									<br>
-									<code>npm install body-parser</code>
+									<ul>
+										<li>Npm initialization:
+											<br>
+											<code>cd ./api</code>
+											<br>
+											<code>npm init</code>
+										</li>
+										<li>Npm extension installation:
+											<br>
+											<code>npm install express</code>
+											<br>
+											<code>npm install hbs</code>
+											<br>
+											<code>npm install nodeman</code>
+											<br>
+											<code>npm install mongodb</code>
+											<br>
+											<code>npm install dotenv</code>
+											<br>
+											<code>npm install body-parser</code>
+										</li>
+										<li>Modifying package.json:
+											<br>
+											<code>"scripts": {</code><br>&nbsp&nbsp
+												<code>"start": "node server.bundle.js",</code><br>&nbsp&nbsp
+											 	<code>"build": "webpack",</code><br>&nbsp&nbsp
+											 	<code>"dev": "nodemon ./main.js localhost 3080"</code><br>
+											<code>}</code>
+										</li>
+										<li>Running nodeJS server:
+											<br>
+											<code>npm run dev</code>
+										</li>
+									</ul>
 								</div>
 							</section>
 
