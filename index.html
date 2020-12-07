@@ -51,33 +51,6 @@
 										<p>NodeJS creates conditions to use JavaScript outside of a browser.Simply put, it is an open-source runtime system for making server to run JS applications.
 											In the project, I build and deploy the REST API application to Heroku which is the cloud platform in the PaaS model.</p>
 
-										<h5>ReactJS:</h5>
-										<ul>
-											<li>It is a JavaScript library for building an interactive User Interface for a web applications.</li>
-											<li>It builds User Interface with single reposibility componenets that creates final look and functionality.</li>
-											<li>However, it still needs to work on an engine that loads the app into a browser.</li>
-										</ul>
-
-										<h5>NodeJS:</h5>
-										<ul>
-											<li>It works as the webserver that accepts API calls from a client or user.</li>
-											<li>It loads single index.html of the React application with all the dependncies (CSS, JS) into a browser.</li>
-											<li>It makes index.html available for React to fill it up with needed components.W</li>
-										</ul>
-
-										<h5>Workflow:</h5>
-										<ol>
-											<li>Browser sends request to a specific route.</li>
-											<li>NodeJs accepts request and loads index.html of the React application.</li>
-											<li>React reads passed route and based on that, it loads appropriate components that will be displayed as UI on index.html.</li>
-										</ol>
-
-										<h5>Heroku:</h5>
-										<ul>
-											<li>We can deploy our application into cloud platform.</li>
-											<li>Heroku offers PaaS solutions for many programming languages.</li>
-										</ul>
-
 										<h5>REST API:</h5>
 										<ul>
 											<li>Web service APIs that adhere to the REST architectural constraints are called RESTful APIs.</li>
@@ -89,6 +62,35 @@
 											<li>Sending request to a resource's URI results with response in format of HTML, XML or JSON.</li>
 											<li>In practice, when system or user is requesting, it sends chosen HTTP request under a specifed URI with defined parameters in form of JSON (when for example updating a resource).</li>
 										</ul>
+
+										<h5>ReactJS:</h5>
+										<ul>
+											<li>It is a JavaScript library for building an interactive User Interface for a web applications.</li>
+											<li>It builds User Interface with single reposibility componenets that creates final look and functionality.</li>
+											<li>However, it still needs to work on an engine that loads the app into a broswser.</li>
+										</ul>
+
+										<h5>NodeJS:</h5>
+										<ul>
+											<li>It loads single index.html of the React application with all the dependncies (CSS, JS) into a browser.</li>
+											<li>Then it makes index.html available for React to fill it up with needed components.</li>
+											<li>Generally, it works like the webserver that accepts API calls from a client or user.</li>
+											<li>Depending on that API call and path passed from an user, the appropriate React elements displays on the screen.</li>
+										</ul>
+
+										<h5>Heroku:</h5>
+										<ul>
+											<li>We can deploy our application into cloud platform.</li>
+											<li>Heroku offers PaaS solutions for many programming languages.</li>
+										</ul>
+
+										<h5>Workflow:</h5>
+										<ol>
+											<li>Browser sends request to a specific route.</li>
+											<li>NodeJs accepts request and loads index.html of the React application to the screen.</li>
+											<li>React reads passed route and based on that, it loads appropriate components that will be displayed as UI.</li>
+											<li>NodeJs depending on the rourts sends the server's content that feeds React's frot-end elements.</li>
+										</ol>
 
 									</header>
 								</div>
