@@ -53,15 +53,24 @@
 
 										<h5>ReactJS:</h5>
 										<ul>
-											<li>It is a JavaScript library for building interactive web applications.</li>
-											<li>However, it still needs to work on an engine that load the app into a browser.</li>
+											<li>It is a JavaScript library for building an interactive User Interface for a web applications.</li>
+											<li>It builds User Interface with single reposibility componenets that creates final look and functionality.</li>
+											<li>However, it still needs to work on an engine that loads the app into a browser.</li>
 										</ul>
 
 										<h5>NodeJS:</h5>
 										<ul>
-											<li>Loads all React application with all the dependncies (CSS, JS) and the components into a browser.</li>
-											<li>It works as the webserver that accepts and reroutes all API calls from a client which is final Application in a browser.</li>
+											<li>It works as the webserver that accepts API calls from a client or user.</li>
+											<li>It loads single index.html of the React application with all the dependncies (CSS, JS) into a browser.</li>
+											<li>It makes index.html available for React to fill it up with needed components.W</li>
 										</ul>
+
+										<h5>Workflow:</h5>
+										<ol>
+											<li>Browser sends request to a specific route.</li>
+											<li>NodeJs accepts request and loads index.html of the React application.</li>
+											<li>React reads passed route and based on that, it loads appropriate components that will be displayed as UI on index.html.</li>
+										</ol>
 
 										<h5>Heroku:</h5>
 										<ul>
