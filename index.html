@@ -94,10 +94,10 @@
 
 										<h5>Workflow:</h5>
 										<ol>
-											<li>Browser sends request to a specific route (web path).</li>
-											<li>NodeJs accepts request and loads index.html of the React application to the screen.</li>
-											<li>React reads passed route and based on that, it loads appropriate components into index.html.</li>
-											<li>NodeJs, depending on the route, sends the database content that feeds React's front-end elements.</li>
+											<li>User sends API call to a specific route (web path) from react web-application.</li>
+											<li>NodeJs web-server accepts request and loads index.html of the React application to the screen.</li>
+											<li>ReactJs reads passed route and based on that loads appropriate components into index.html.</li>
+											<li>NodeJs, depending on the route and API call, sends the database resources that feeds React's front-end elements.</li>
 											<li>User sees a complete application.</li>
 										</ol>
 
@@ -232,10 +232,15 @@
 										<li>By doing so, we can be sure that all API calls will be directed from Reat Web-app to http://localhost:3080 where the nodeJS API is listening.</li>
 									</ul>
 
-									<h5>....</h5>
-									<ul>
+									<h5>Demo workflow:</h5>
+									<ol>
+										<li>User sends API call from React web-app level.</li>
+										<li>NodeJs recognizes API call and executes it according to programmed logic.
+
+
+										</li>
 										<li></li>
-									</ul>
+									</ol>
 
 								</div>
 							</section>
