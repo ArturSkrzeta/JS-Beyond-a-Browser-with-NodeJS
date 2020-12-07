@@ -230,18 +230,12 @@
 											<code>"proxy": "http://localhost:3080"</code>
 										</li>
 										<li>By doing so, we can be sure that all API calls will be directed from Reat Web-app to http://localhost:3080 where the nodeJS API is listening.</li>
-									</ul>
-
-									<h5>Demo workflow:</h5>
-									<ol>
-										<li>User sends API call from React web-app level.</li>
-										<li>NodeJs recognizes API call and executes it according to programmed logic.
-
-
+										<li>In the project, React app has sevice file which contains async functions that use fetch API to make the API calls to node API.
+											<br>
+											<code>...</code>
 										</li>
-										<li></li>
-									</ol>
-
+										<li>React component makes API call with service function, API returns data, sets state accordingly and renders the appropriate components to display it.</li>
+									</ul>
 								</div>
 							</section>
 
