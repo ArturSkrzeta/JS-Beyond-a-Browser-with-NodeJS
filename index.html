@@ -243,20 +243,19 @@
 										</li>
 										<li>POST workflow:
 											<br>
-											1. User submits a form of React web-app.<br>
-											2. React web-app gets data from user and saves it in the state.<br>
-											3. React web-app imports service function and passes state data as argument.<br>
-											4. Service function makes API call to node API.<br>
+											1. User filling up the form updates state in React web-app.<br>
+											2. React web-app imports service function and passes state data as argument.<br>
+											3. Service function makes API call to node API.<br>
 											4. Service funcion's API call is actually the POST request with request's body which is passed React's state.<br>
 											5. Node API accepts request and saves passed data to database and returns response in JSON.<br>
-											6. React updates its state accordingly and renders the appropriate components to display graphical element along with updated data.
+											6. React updates its state accordingly and renders the appropriate component to display graphical element along with updated data.
 										</li>
 										<li>GET workflow:
 											<br>
 											1. User sends GET request from React web-app.<br>
 											2. React web-app imports service function that maeks API call to node API.<br>
 											3. Service funcion's API call is actually the GET request.<br>
-											4. Node API accepts request and fetch thead data from the database.<br>
+											4. Node API accepts request and fetch a data from the database.<br>
 											5. Node API sends the response in JSON format to React web-app:
 												<br>&nbsp&nbsp
 												<code>{firstName: "user_fn", lastName: "user_ln", email: "usera@gmail.com"}</code><br>
