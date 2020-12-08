@@ -230,11 +230,28 @@
 											<code>"proxy": "http://localhost:3080"</code>
 										</li>
 										<li>By doing so, we can be sure that all API calls will be directed from Reat Web-app to http://localhost:3080 where the nodeJS API is listening.</li>
-										<li>In the project, React app has sevice file which contains async functions that use fetch API to make the API calls to node API.
+										<li>In the project, React app has the sevice file which contains async functions that use fetch API to make the API calls to the node API.
 											<br>
-											<code>...</code>
+											<code>export async function createUser(data) {</code><br>&nbsp&nbsp
+												<code>const response = await fetch('/api/user', {</code><br>&nbsp&nbsp&nbsp&nbsp
+											  	<code>method: 'POST',</code><br>&nbsp&nbsp&nbsp&nbsp
+											    <code>headers: {'Content-Type': 'application/json'},</code><br>&nbsp&nbsp&nbsp&nbsp
+											    <code>body: JSON.stringify({user: data})</code><br>&nbsp&nbsp
+											  <code>})</code><br>&nbsp&nbsp
+											<code>return await response.json();</code><br>
+											<code>}</code>
 										</li>
-										<li>React component makes API call with service function, API returns data, sets state accordingly and renders the appropriate components to display it.</li>
+										<li>Workflow:
+											<br>
+											1. User submits a form of React web-app.<br>
+											2. React web-app gets data from user and saves it in the state.<br>
+											3. React web-app imports service function and passes state data as argument.<br>
+											4. Service function maeks API call to node API.<br>
+											4. Service funcion's API call is actually the POST rquests with request's body which is passed React state data.<br>
+											5. Node API accepts request and saves passed data to database and returns response in JSON.<br>
+											6. React updates its state accordingly and renders the appropriate components to display graphical element along with updated data.
+										</li>
+										<li>React sends request in json -> node converts it into string -> node takes repsonce and converts it to json and sends back to React</li>
 									</ul>
 								</div>
 							</section>
