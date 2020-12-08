@@ -176,6 +176,28 @@
 										</li>
 									</ul>
 
+									<h5>React state:</h5>
+									<ul>
+										<li>State is assigned to  a given class component.</li>
+										<li>We can update state by executing some class functions or on some evens like user filling a form.</li>
+										<li>Here is the example of updating state on every change on user's form:
+											- it updated itself with each character provided in each field,<br>
+											- thanks to that we can keep the input data in the state on an ongoing basis without even submitting by user,<br>
+											- code:
+												<br>
+												<code>onChangeForm = (e) => {</code><br>&nbsp&nbsp&nbsp&nbsp
+													<code>let user = this.state.user</code><br>&nbsp&nbsp&nbsp&nbsp
+													<code>if (e.target.name === 'firstname') {</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+														<code>user.firstName = e.target.value;</code><br>&nbsp&nbsp&nbsp&nbsp
+													<code>} else if (e.target.name === 'lastname') {</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+														<code>user.lastName = e.target.value;</code><br>&nbsp&nbsp&nbsp&nbsp
+													<code>}</code><br>&nbsp&nbsp&nbsp&nbsp
+													<code>this.setState({user})</code><br>
+												<code>}</code><br>
+												- the form's fields needs to be have names provided: firstname and lastname respectively.
+											</li>
+										</ul>
+
 									<h5>Deploying on Heroku:</h5>
 									<ul>
 										<li>It requires Heroku CLI installation in order to upload the application.</li>
@@ -263,28 +285,6 @@
 											7. React web-app rerenders component to display the fetched data.
 										</li>
 									</ul>
-
-									<h5>React state:</h5>
-									<ul>
-										<li>State is assigned to  a given class component.</li>
-										<li>We can update state by executing some class functions or on some evens like user filling a form.</li>
-										<li>Here is the example of updating state on every change on user's form:
-											- it updated itself with each character provided in each field,<br>
-											- thanks to that we can keep the input data in the state on an ongoing basis without even submitting by user,<br>
-											- code:
-												<br>
-												<code>onChangeForm = (e) => {</code><br>&nbsp&nbsp&nbsp&nbsp
-													<code>let user = this.state.user</code><br>&nbsp&nbsp&nbsp&nbsp
-													<code>if (e.target.name === 'firstname') {</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-														<code>user.firstName = e.target.value;</code><br>&nbsp&nbsp&nbsp&nbsp
-													<code>} else if (e.target.name === 'lastname') {</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-														<code>user.lastName = e.target.value;</code><br>&nbsp&nbsp&nbsp&nbsp
-													<code>}</code><br>&nbsp&nbsp&nbsp&nbsp
-													<code>this.setState({user})</code><br>
-												<code>}</code><br>
-												- the form's fields needs to be have names provided: firstname and lastname respectively.
-											</li>
-										</ul>
 
 								</div>
 							</section>
