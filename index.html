@@ -221,7 +221,7 @@
 										</li>
 									</ul>
 
-									<h5>Development:</h5>
+									<h5>Node and React integration:</h5>
 									<ul>
 										<li>Making NodeJS server listening on the port 3080.</li>
 										<li>ReactJS runs on port 3000.</li>
@@ -241,17 +241,28 @@
 											<code>return await response.json();</code><br>
 											<code>}</code>
 										</li>
-										<li>Workflow:
+										<li>POST workflow:
 											<br>
 											1. User submits a form of React web-app.<br>
 											2. React web-app gets data from user and saves it in the state.<br>
 											3. React web-app imports service function and passes state data as argument.<br>
 											4. Service function makes API call to node API.<br>
-											4. Service funcion's API call is actually the POST rquest with request's body which is passed React's state.<br>
+											4. Service funcion's API call is actually the POST request with request's body which is passed React's state.<br>
 											5. Node API accepts request and saves passed data to database and returns response in JSON.<br>
 											6. React updates its state accordingly and renders the appropriate components to display graphical element along with updated data.
 										</li>
-										<li>React sends request in json -> service function converts it into string and sends to node API -> node do the job and takes response and converts it to json and sends back to React.</li>
+										<li>GET workflow:
+											<br>
+											1. User sends GET request from React web-app.<br>
+											2. React web-app imports service function that maeks API call to node API.<br>
+											3. Service funcion's API call is actually the GET request.<br>
+											4. Node API accepts request and fetch thead data from the database.<br>
+											5. Node API sends the response in JSON format to React web-app:
+												<br>&nbsp&nbsp
+												<code>{firstName: "user_fn", lastName: "user_ln", email: "usera@gmail.com"}</code><br>
+											6. React web-app receives response and updates its state with it.<br>
+											7. React web-app rerenders component to display the fetched data.
+										</li>
 									</ul>
 
 									<h5>React state:</h5>
@@ -273,8 +284,8 @@
 													<code>this.setState({user})</code><br>
 												<code>}</code><br>
 												- the form's fields needs to be have names provided: firstname and lastname respectively.
-										</li>
-									</ul>
+											</li>
+										</ul>
 
 								</div>
 							</section>
