@@ -36,7 +36,7 @@ class App extends Component {
       user.id = this.state.numberOfUsers + 1
       createUser(this.state.user)
         .then(response => {
-          console.log(response); // response from node JS
+          console.log(response); // response from node JS in json - we can see it in browser's console
           this.setState({numberOfUsers: this.state.numberOfUsers + 1})
       });
       this.getAllUsers()
