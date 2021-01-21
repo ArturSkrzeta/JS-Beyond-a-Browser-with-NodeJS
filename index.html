@@ -273,6 +273,15 @@
 											4. Service funcion's API call is actually the POST request with request's body which is passed React's state.<br>
 											5. Node API accepts request and saves passed data to database and returns response in JSON.<br>
 											6. React updates its state accordingly and renders the appropriate component to display graphical element along with updated data.
+											<br>
+											- Let's go with the example of sending POST request to http://0.0.0.0:3080/users endpoint:<br>
+											<br>
+											<img src="images/post_req.JPG" width="620"><br>
+											1. Request goes to main.js which is a core file configuration of nodejs server.<br>
+											2. main.js uses line of code:<br>
+											<code>app.use('/users', require('./routes/users'))</code> for rerouting enpoint '/users' into './routes/users'.<br>
+											3. In the users.js, the router.post accepts the request and contains the logic on how to handle it.<br>
+											4. For example the router creates instance user of User model, populates its attributes with received data and saves the instance do the database.
 										</li>
 										<li>GET workflow:
 											<br>
@@ -286,10 +295,10 @@
 											6. React web-app receives response and updates its state with it.<br>
 											7. React web-app rerenders component to display the fetched data.<br>
 											<br>
-											- For example, we send GET request to http://0.0.0.0:3080/<br>
-											1. Request goest to main.js which is a core file configuration of nodejs server.<br>
-											2. main.js uses code: <code>app.use('/', require('./routes/index'))</code> for rerouting endpoint <b>'/'</b> into <b>'./routes/index'</b>.<br>
-											3. In the index.js there is the router that accepts the request and contains the logic on how to handle it.<br>
+											- Let's take GET request to http://0.0.0.0:3080/ endpoint:<br>
+											1. Request goes to main.js which is a core file configuration of nodejs server.<br>
+											2. main.js uses line of code:<br> <code>app.use('/', require('./routes/index'))</code> for rerouting endpoint '/' into './routes/index'.<br>
+											3. In the index.js, the router.get accepts the request and contains the logic on how to handle it.<br>
 											4. For example that router can render index.html in response that shouws up on user's screen.
 										</li>
 									</ul>
