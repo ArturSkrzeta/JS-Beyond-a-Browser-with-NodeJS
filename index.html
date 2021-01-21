@@ -129,10 +129,10 @@
 
 									<h5>Setting up nodejs server:</h5>
 									<ul>
-										<li>We can run server by running using <b>express</b> extension:
+										<li>We can run NodeJS server by using <b>Express</b>:
 											<br>
 											<code>const express = require('express')</code><br>
-											<code>const port = 3000</code><br>
+											<code>const port = 3080</code><br>
 											<code>const app = express()</code><br>
 											<code>...</code><br>
 											<code>app.listen(port)</code>
@@ -277,14 +277,20 @@
 										<li>GET workflow:
 											<br>
 											1. User sends GET request from React web-app.<br>
-											2. React web-app imports service function that maeks API call to node API.<br>
-											3. Service funcion's API call is actually the GET request.<br>
+											2. React web-app imports service function that makes API call to node API.<br>
+											3. Service function's API call is actually the GET request.<br>
 											4. Node API accepts request and fetch a data from the database.<br>
 											5. Node API sends the response in JSON format to React web-app:
 												<br>&nbsp&nbsp
 												<code>{firstName: "user_fn", lastName: "user_ln", email: "usera@gmail.com"}</code><br>
 											6. React web-app receives response and updates its state with it.<br>
-											7. React web-app rerenders component to display the fetched data.
+											7. React web-app rerenders component to display the fetched data.<br>
+											<br>
+											- For example, we send GET request to http://0.0.0.0:3080/<br>
+											1. Request goest to main.js which is a core file configuration of nodejs server.<br>
+											2. main.js uses code: <code>app.use('/', require('./routes/index'))</code> for rerouting endpoint <b>'/'</b> into <b>'./routes/index'</b>.<br>
+											3. In the index.js there is the router that accepts the request and contains the logic on how to handle it.<br>
+											4. For example that router can render index.html in response that shouws up on user's screen.
 										</li>
 									</ul>
 
@@ -308,7 +314,31 @@
 							<section id="four">
 								<div class="container">
 									<h3>Setup</h3>
-									<h5>App installation:</h5>
+									<h5>Application installation:</h5>
+									<ul>
+										<li>ReacJS installation:
+											<br>
+											<code>cd ./application</code>
+										</li>
+										<li>Setting up scripts in package.json:
+											<br>
+											<code>"scripts": {</code><br>&nbsp&nbsp&nbsp
+										    <code>"start": "node server.bundle.js",</code><br>&nbsp&nbsp&nbsp
+										    <code>"build": "webpack",</code><br>&nbsp&nbsp&nbsp
+										    <code>"dev": "nodemon ./main.js localhost 3080"</code><br>
+										  <code>},</code>
+										</li>
+										<li>Setting up proxy in package.josn:
+											<br>
+											<code>"proxy": "http://localhost:3080",</code>
+										</li>
+										<li>Running ReactJS application:
+											<br>
+											<code>npm start</code>
+										</li>
+									</ul>
+
+									<h5>API installation:</h5>
 									<ul>
 										<li>Npm initialization:
 											<br>
