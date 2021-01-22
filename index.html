@@ -325,29 +325,6 @@
 							<section id="four">
 								<div class="container">
 									<h3>Setup</h3>
-									<h5>Application installation:</h5>
-									<ul>
-										<li>ReacJS installation:
-											<br>
-											<code>cd ./application</code>
-										</li>
-										<li>Setting up scripts in package.json:
-											<br>
-											<code>"scripts": {</code><br>&nbsp&nbsp&nbsp
-										    <code>"start": "node server.bundle.js",</code><br>&nbsp&nbsp&nbsp
-										    <code>"build": "webpack",</code><br>&nbsp&nbsp&nbsp
-										    <code>"dev": "nodemon ./main.js localhost 3080"</code><br>
-										  <code>},</code>
-										</li>
-										<li>Setting up proxy in package.josn:
-											<br>
-											<code>"proxy": "http://localhost:3080",</code>
-										</li>
-										<li>Running ReactJS application:
-											<br>
-											<code>npm start</code>
-										</li>
-									</ul>
 
 									<h5>API installation:</h5>
 									<ul>
@@ -386,6 +363,36 @@
 											<code>npm run dev</code>
 										</li>
 									</ul>
+
+									<h5>Application installation:</h5>
+									<ul>
+										<li>Npx installation:
+											<br>
+											<code>npm install -g npx</code>
+										</li>
+										<li>ReacJS installation:
+											<br>
+											<code>cd ./application</code>
+											<code>npx create-react-app application</code>
+										</li>
+										<li>Setting up scripts in package.json:
+											<br>
+											<code>"scripts": {</code><br>&nbsp&nbsp&nbsp
+												<code>"start": "node server.bundle.js",</code><br>&nbsp&nbsp&nbsp
+												<code>"build": "webpack",</code><br>&nbsp&nbsp&nbsp
+												<code>"dev": "nodemon ./main.js localhost 3080"</code><br>
+											<code>},</code>
+										</li>
+										<li>Setting up proxy in package.josn:
+											<br>
+											<code>"proxy": "http://localhost:3080",</code>
+										</li>
+										<li>Running ReactJS application:
+											<br>
+											<code>npm start</code>
+										</li>
+									</ul>
+									
 								</div>
 							</section>
 
