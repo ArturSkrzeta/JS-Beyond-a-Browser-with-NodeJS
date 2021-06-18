@@ -73,6 +73,7 @@ input, select, textarea {
 }
 
 img {
+	margin-bottom:20px;
 	max-width: 100%;
 }
 
@@ -2843,7 +2844,7 @@ td {
 						border: 0;
 						color: #ffffff !important;
 						display: block;
-						padding: 0.85em 0;
+						padding: 0.8em 0;
 						text-decoration: none;
 					}
 
